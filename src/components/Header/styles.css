@@ -1,0 +1,21 @@
+.logo-text {
+  font-size: 25px;
+  color: white;
+  transition: color 0.3s;
+  display: inline-block;
+}
+
+.logo-text:hover .rotate-z,
+.rotate-z:hover {
+  color: #00FF7F;
+}
+
+.rotate-z {
+  display: inline-block;
+  transform: rotate(-45deg);
+  font-size: 26px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  right: 1px;
+  bottom: 1px;
+}

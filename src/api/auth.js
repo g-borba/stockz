@@ -1,8 +1,7 @@
 import axios from 'axios';
-require('dotenv').config();
 
 const setAuthToken = () => {
-  const token = process.env.SD_API_KEY;
+  const token = process.env.REACT_APP_SD_API_KEY;
 
   if (token) {
     axios.defaults.params = {
