@@ -11,6 +11,15 @@ const setAuthToken = () => {
   } else {
     delete axios.defaults.params.api_token;
   }
+
+  axios.interceptors.request.use((config) => {
+    if (config.params) {
+      config.params.api_token = token;
+    } else {
+      config.params = { api_token: token };
+    }
+    return config;
+  });
 };
 
 export default setAuthToken;

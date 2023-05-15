@@ -1,10 +1,10 @@
 import axios from '../axios';
 import setAuthToken from '../auth';
 
-const CryptoForexQuotes = {
-  getCryptoForexData: async (symbol) => {
+const ListNews = {
+  getNewsData: async (symbol) => {
     try {
-      const response = await axios.get('data/currency/latest', {
+      const response = await axios.get('news/all', {
         params: {
           symbols: symbol,
           api_token: process.env.REACT_APP_SD_API_KEY
@@ -21,4 +21,4 @@ const CryptoForexQuotes = {
   },
 };
 
-export default CryptoForexQuotes;
+export default ListNews;

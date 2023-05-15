@@ -3,14 +3,14 @@ import setAuthToken from '../auth';
 
 const IntradayQuote = {
   getIntradayData: async (symbol) => {
-    setAuthToken();
-
     try {
       const response = await axios.get('data/intraday', {
         params: {
           symbols: symbol,
         },
       });
+
+      setAuthToken();
 
       return response.data;
     } catch (error) {
