@@ -1,5 +1,5 @@
-import axios from '../axios';
-import setAuthToken from '../auth';
+import axios from '../axios'
+import setAuthToken from '../auth'
 
 const CryptoForexQuotes = {
   getCryptoForexData: async (symbol) => {
@@ -7,18 +7,18 @@ const CryptoForexQuotes = {
       const response = await axios.get('data/currency/latest', {
         params: {
           symbols: symbol,
-          api_token: process.env.REACT_APP_SD_API_KEY
+          api_token: process.env.REACT_APP_SD_API_KEY,
         },
-      });
+      })
 
-      setAuthToken();
+      setAuthToken()
 
-      return response.data;
+      return response.data
     } catch (error) {
-      console.error(error);
-      throw new Error('Error calling the API');
+      console.error(error)
+      throw new Error('Error calling the API')
     }
   },
-};
+}
 
-export default CryptoForexQuotes;
+export default CryptoForexQuotes

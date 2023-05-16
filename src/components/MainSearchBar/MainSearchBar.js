@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import TextField from '@mui/material/TextField';
-import SearchIcon from '@mui/icons-material/Search';
-import InputAdornment from '@mui/material/InputAdornment';
+import React, { useState } from 'react'
+import TextField from '@mui/material/TextField'
+import SearchIcon from '@mui/icons-material/Search'
+import InputAdornment from '@mui/material/InputAdornment'
 
 function MainSearchBar({ selectedButton, handleSearchClick }) {
-  const [searchValue, setSearchValue] = useState('');
+  const [searchValue, setSearchValue] = useState('')
 
   const handleChange = (event) => {
-    setSearchValue(event.target.value);
-  };
+    setSearchValue(event.target.value)
+  }
 
   const handleClick = () => {
-    handleSearchClick(searchValue);
-  };
+    handleSearchClick(searchValue)
+  }
 
   return (
     <TextField
@@ -34,7 +34,7 @@ function MainSearchBar({ selectedButton, handleSearchClick }) {
         ),
       }}
     />
-  );
+  )
 }
 
-export default MainSearchBar;
+export default MainSearchBar

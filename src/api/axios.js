@@ -1,7 +1,7 @@
-import axios from 'axios';
+import axios from 'axios'
 
 const instance = axios.create({
-  baseURL: 'https://api.stockdata.org/v1/'
-});
+  baseURL: 'https://api.stockdata.org/v1/',
+})
 
-export default instance;
+export default instance

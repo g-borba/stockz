@@ -1,5 +1,5 @@
-import axios from '../axios';
-import setAuthToken from '../auth';
+import axios from '../axios'
+import setAuthToken from '../auth'
 
 const ListNews = {
   getNewsData: async (symbol) => {
@@ -7,18 +7,18 @@ const ListNews = {
       const response = await axios.get('news/all', {
         params: {
           symbols: symbol,
-          api_token: process.env.REACT_APP_SD_API_KEY
+          api_token: process.env.REACT_APP_SD_API_KEY,
         },
-      });
+      })
 
-      setAuthToken();
+      setAuthToken()
 
-      return response.data;
+      return response.data
     } catch (error) {
-      console.error(error);
-      throw new Error('Error calling the API');
+      console.error(error)
+      throw new Error('Error calling the API')
     }
   },
-};
+}
 
-export default ListNews;
+export default ListNews

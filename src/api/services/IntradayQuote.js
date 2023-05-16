@@ -1,5 +1,5 @@
-import axios from '../axios';
-import setAuthToken from '../auth';
+import axios from '../axios'
+import setAuthToken from '../auth'
 
 const IntradayQuote = {
   getIntradayData: async (symbol) => {
@@ -8,16 +8,16 @@ const IntradayQuote = {
         params: {
           symbols: symbol,
         },
-      });
+      })
 
-      setAuthToken();
+      setAuthToken()
 
-      return response.data;
+      return response.data
     } catch (error) {
-      console.error(error);
-      throw new Error('Error calling the API');
+      console.error(error)
+      throw new Error('Error calling the API')
     }
   },
-};
+}
 
-export default IntradayQuote;
+export default IntradayQuote
